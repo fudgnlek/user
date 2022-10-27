@@ -3,7 +3,7 @@
 function getInfo(){
     const userIdx = window.localStorage.getItem("userIdx");
     const req = {userIdx: userIdx};
-    fetch("/getResInfo",{
+    fetch("/user/getResInfo",{
         method:"POST",
         headers: {
         "Content-Type": "application/json"

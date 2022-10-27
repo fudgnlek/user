@@ -51,7 +51,7 @@ const process = {
     try{
       const connection = await pool.getConnection(async (conn)=>conn);
       try{
-        const [rows]=await indexDao.isValidUsers(connection, userID, password);
+        const [rows]=await indexDao.isValidUser(connection, userID, password);
         console.log(rows);
         //DB 회원 검증
         if(rows.length <1){
@@ -97,7 +97,7 @@ const process = {
       try {
         const connection = await pool.getConnection(async (conn) => conn);
         try {
-          const [rows] = await indexDao.insertUsers(
+          const [rows] = await indexDao.insertUser(
             connection,
             userID,
             userName, 
@@ -129,7 +129,7 @@ const process = {
       try {
         const connection = await pool.getConnection(async (conn)=> conn);
         try {
-        const [rows] = await indexDao.insertUsers(connection, userID, userName, password);
+        const [rows] = await indexDao.insertUser(connection, userID, userName, password);
 
   
       } catch(err){
@@ -237,7 +237,7 @@ const readUsers = async function(req,res){
     try {
         const connection = await pool.getConnection(async (conn) => conn);
         try {
-          const [rows] = await indexDao.selectUsers(connection);
+          const [rows] = await indexDao.selectUser(connection);
         
           return res.send(
             {
@@ -263,7 +263,7 @@ const readUsers = async function(req,res){
   }
 
 
-const readJwt = async function(req,res){
+const readJwtU = async function(req,res){
   const { userIdx, userName } = req.verifiedToken;
   return res.send({
     result: {userIdx: userIdx, userName:userName},
@@ -300,5 +300,5 @@ const getResInfo = async function(req,res){
 }
 
 module.exports = {
-    output, process, hospital, readUsers, readJwt, pharmacy, reservation,getResInfo
+    output, process, hospital, readUsers, readJwtU, pharmacy, reservation,getResInfo
 }

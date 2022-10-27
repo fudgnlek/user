@@ -13,10 +13,10 @@
     text-align: center;
     width: 83%;
     font-size: 35px;
-    margin-top: 0px;
+    margin-top: 35px;
     padding-bottom: 13px;
 }
-.form-floating{
+#log2{
     width: 30%;
     padding: 5px;
     text-align: center;
@@ -24,47 +24,52 @@
 }
 #log{
     margin-top: 20px;
+    width: 30%;
+    padding: 5px;
+    text-align: center;
 }
 .checkbox{
     margin-top: 5px;
 }
-#loginBtn{
+#signupBtn{
     width: 30%;
+    margin: 10px;
 }
 .container1 a{
-    font-size: 13px;
+    margin-top: 20px;
     color: gray;
     text-decoration: none;
     text-align: center;
     margin-left: 5px;
 }
-#gosignup1{
-    margin-top: 10px;
-}
 .container1 a:hover{
     color: black;
 
 }
-.dropdown-button{
-    color: white;
-    margin-top: 7px;
-    font-size: 17px;
+.container2{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    margin-bottom: 10px;
 }
-#sign-out{
-    color: white;
-    background-color: rgb(33,37,41);
-    border:none;
+#pw{
+    margin-left: 72px;
+    width: 73.6%;
+    text-align: center;
 }
-
-.dropdown-content{
-    font-size: 12px;
-    margin-left: 10px;
-    margin-top: 13px;
-
-}
-#direct{
-    font-size: 8px;
-}
-#sign-out:hover{
+.check{
     color: gray;
+    font-size: 13px;
+    margin-top: 3px;
+}
+.check:hover{
+    color: black;
+}
+#che{
+    margin-top: 5px;
+}
+.container1 p{
+    color: gray;
+    text-align: center;
+    font-size: 10px;
 }

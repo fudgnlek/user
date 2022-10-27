@@ -13,60 +13,58 @@
     text-align: center;
     width: 83%;
     font-size: 35px;
-    margin-top: 35px;
+    margin-top: 0px;
     padding-bottom: 13px;
 }
-#log2{
+.form-floating{
     width: 30%;
     padding: 5px;
     text-align: center;
 
 }
 #log{
-    margin-top: 20px;
-    width: 30%;
-    padding: 5px;
-    text-align: center;
+    margin-top: 50px;
 }
 .checkbox{
     margin-top: 5px;
 }
-#signupBtn{
+#loginBtn{
     width: 30%;
-    margin: 10px;
 }
 .container1 a{
-    margin-top: 20px;
+    font-size: 13px;
     color: gray;
     text-decoration: none;
     text-align: center;
     margin-left: 5px;
 }
+#gosignup{
+    margin-top: 10px;
+}
 .container1 a:hover{
     color: black;
 
 }
-.container2{
-    display: flex;
-    width: 40%;
-    align-items: center;
-    margin-bottom: 10px;
+.dropdown-button{
+    color: white;
+    margin-top: 7px;
+    font-size: 17px;
 }
-#pw{
-    margin-left: 72px;
-    width: 73.6%;
-    text-align: center;
+#sign-out{
+    color: white;
+    background-color: rgb(33,37,41);
+    border:none;
 }
-.check{
-    margin-left: 5px;
-    font-size: 25px;
+
+.dropdown-content{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 13px;
+
+}
+#direct{
+    font-size: 8px;
+}
+#sign-out:hover{
     color: gray;
-}
-.check:hover{
-    color: black;
-}
-.container1 p{
-    color: gray;
-    text-align: center;
-    font-size: 10px;
 }

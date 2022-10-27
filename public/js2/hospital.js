@@ -173,7 +173,7 @@ function displayPlaces(places,lat,lon) {
                 const request = {
                     hosName : hosName
                 }
-                fetch("/gethosIdx",{
+                fetch("/user/gethosIdx",{
                     method:"POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -258,7 +258,7 @@ $(document).on('click','#reservation',function(){
     };
         console.log(req2);
     
-    fetch("/reservation",{
+    fetch("/user/reservation",{
     method : "POST",
     headers: {
         "Content-Type": "application/json"
@@ -269,7 +269,7 @@ $(document).on('click','#reservation',function(){
     .then((data) => {
         if(data.code!=200){
             alert("해당 시간에 예약이 불가능합니다. 다른 시간을 선택해주세요");
-            location.replace('/getmap');
+            location.replace('/user/getmap');
             }
             else{
                 alert('예약 완료');
@@ -287,7 +287,7 @@ $(document).on('click','#reservation',function(){
 });
 
 $(document).on('click','#end',function(){
-    location.replace('/main');
+    location.replace('/user/main');
     window.localStorage.removeItem('name');
     window.localStorage.removeItem('address');
     window.localStorage.removeItem('date');
@@ -569,7 +569,7 @@ function sorting(places,latitude,longitude){
                     const request = {
                         hosName : hosName
                     }
-                    fetch("/gethosIdx",{
+                    fetch("/user/gethosIdx",{
                         method:"POST",
                         headers: {
                             "Content-Type": "application/json"

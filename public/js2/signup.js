@@ -28,7 +28,7 @@ function check(){
     else{
         alert("비밀번호가 일치합니다.");
         psword = 1;
-        document.getElementById('che').style.color = 'green';
+        document.querySelector('.check').style.color = 'green';
         return true;
     }
     
@@ -38,7 +38,7 @@ function refreshPage(){
     window.location.reload();
 } 
 
-function is_checked(){
+function signup(){
     var checkbox = document.getElementById('flexCheckDefault');
     var is_ck = checkbox.checked;
 
@@ -51,37 +51,42 @@ function is_checked(){
         return false;
     }
     else{
-        return true;
+        if(userID.value == ""){
+            alert("아이디를 입력하세요.");
+            userID.focus();
+            return false;
+        }
+        if(userName.value == ""){
+            alert("이름을 입력하세요.");
+            userName.focus();
+            return false;
+        }
+        const req = {
+            userID : userID.value,
+            userName: userName.value,
+            password :password.value,
+        };
+        console.log(req);
+
+        fetch("/user/signup",{
+            method : "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body : JSON.stringify(req),
+        }).then((response) => response.json())
+            .then((data) => {
+                if(data.code!=200){
+                    return alert("요청에문제가생겼습니다.");
+                }
+            const jwt = data.result.jwt;
+            console.log(jwt);
+            localStorage.setItem("x-access-token", jwt);
+            alert(data.message);
+            return location.replace("/user/login");
+          });
     }
 
     
 }
 
-
-
-function signup(){
-   const req = {
-    userID : userID.value,
-    userName: userName.value,
-    password :password.value,
-   };
-   console.log(req);
-
-   fetch("/signup",{
-    method : "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body : JSON.stringify(req),
-   }).then((response) => response.json())
-    .then((data) => {
-        if(data.code!=200){
-            return alert("요청에문제가생겼습니다.");
-        }
-    const jwt = data.result.jwt;
-    console.log(jwt);
-    localStorage.setItem("x-access-token", jwt);
-    alert(data.message);
-    return location.replace("/login");
-  });
-}

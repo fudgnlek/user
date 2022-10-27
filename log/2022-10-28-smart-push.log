@@ -1,0 +1,4 @@
+{"level":"info","message":"API server start at port 3000","timestamp":"2022-10-28 04:52:59"}
+{"level":"info","message":"API server start at port 3000","timestamp":"2022-10-28 05:02:38"}
+{"level":"error","message":"createhosDB Connection error\n: {\"errorno\":\"ETIMEDOUT\",\"code\":\"ETIMEDOUT\",\"syscall\":\"connect\",\"fatal\":true}","timestamp":"2022-10-28 05:08:48"}
+{"level":"error","message":"createhosDB Connection error\n: {\"errorno\":\"ETIMEDOUT\",\"code\":\"ETIMEDOUT\",\"syscall\":\"connect\",\"fatal\":true}","timestamp":"2022-10-28 05:08:52"}

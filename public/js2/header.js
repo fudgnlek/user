@@ -9,10 +9,10 @@ btnSignout.addEventListener("click",signOut);
 async function setHeader(jwt){
     if(!jwt){
         alert('로그인이 필요합니다.');
-        location.replace('/login');
+        location.replace('/user/login');
         return false;
     }
-    fetch("/jwt",{
+    fetch("/user/jwt",{
         method : "GET",
         headers: { 
         "x-access-token": jwt
@@ -47,5 +47,5 @@ async function setHeader(jwt){
 
 function signOut(){
     localStorage.removeItem("x-access-token");
-    location.replace('/login');
+    location.replace('/user/login');
     }
